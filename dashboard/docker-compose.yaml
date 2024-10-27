@@ -1,0 +1,21 @@
+services:
+  dashboard:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: dashboard
+    # command: ["tail", "-f", "/dev/null"]
+    command: >
+      sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8080"
+    environment:
+      API_URL: http://provider:8000/events
+    volumes:
+      - ./app:/app
+    networks:
+      - app_network
+    ports:
+      - "8080:8080"
+  
+networks:
+  app_network:
+    external: true

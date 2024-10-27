@@ -1,0 +1,64 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django migrations
+**/migrations/
+
+# Environment variables
+.env
+*.env
+
+# Django-related files
+*.sqlite3
+db.sqlite3
+/static/
+/media/
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+ENV/
+.ENV/
+
+# VSCode settings
+.vscode/
+
+# Byte-compiled files
+*.pyc
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.cache
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+dist/
+build/
+
+# Celery beat schedule file
+celerybeat-schedule
+
+# Pytest files
+.pytest_cache/
+
+# IDE files
+.idea/
+*.iml
+
+# macOS and Linux related files
+.DS_Store
+*.swp
